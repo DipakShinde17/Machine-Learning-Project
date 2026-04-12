@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Shortlisting System</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Smart Resume Shortlisting</h1>
+        <p>AI-Based Resume Screening & Matching</p>
+    </header>
+
+    <!-- Main Container -->
+    <section class="container">
+
+        <!-- Upload Resume -->
+        <div class="card">
+            <h2>Upload Resume</h2>
+            <p>Upload candidate resume in PDF or DOC format</p>
+            <input type="file">
+            <button>Analyze Resume</button>
+        </div>
+
+        <!-- Job Description -->
+        <div class="card">
+            <h2>Job Description</h2>
+            <textarea placeholder="Paste job description here..."></textarea>
+            <button>Match Skills</button>
+        </div>
+
+        <!-- Result -->
+        <div class="card result">
+            <h2>Shortlisting Result</h2>
+            <!-- <p><strong>Match Score:</strong> 82%</p> -->
+            <p class="shortlisted">✅ Resume Shortlisted</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Resume Shortlisting System | Designed by Dipak</p>
+    </footer>
+
+</body>
+</html>
