@@ -1,0 +1,54 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+/* Hero */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Card */
+.custom-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+/* Button */
+.btn-custom {
+    background: #ff7eb3;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background: #ff4f91;
+}
+
+/* Result */
+.result-box {
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    opacity: 0.8;
+}

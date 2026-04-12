@@ -1,0 +1,85 @@
+<!-- <form action="/predict" method="POST" enctype="multipart/form-data">
+
+    <label>Upload Resume (PDF/DOC)</label>
+    <input type="file" name="resume" required>
+
+    <label>Paste Job Description</label>
+    <textarea name="job_desc" required></textarea>
+
+    <button type="submit">Analyze Resume</button>
+
+</form>
+
+{% if result %}
+    <h3>{{ result }}</h3>
+{% endif %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Shortlisting</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- 🔥 HERO SECTION -->
+<div class="hero text-center">
+    <h1>🚀 AI Resume Shortlisting System</h1>
+    <p>Smart Hiring Powered by AI & NLP</p>
+</div>
+
+<!-- 🔥 MAIN CARD -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card custom-card p-4">
+
+                <form action="/predict" method="POST" enctype="multipart/form-data">
+
+                    <div class="mb-3">
+                        <label class="form-label">📄 Upload Resume</label>
+                        <input type="file" class="form-control" name="resume" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">💼 Job Skill / Description</label>
+                        <textarea class="form-control" name="job_desc" rows="3" placeholder="e.g. Python,Java,SQL..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-custom w-100">
+                        🔍 Analyze Resume
+                    </button>
+
+                </form>
+
+                <!-- 🔥 RESULT -->
+                {% if result %}
+                <div class="result-box mt-4 text-center">
+                    <h4>{{ result }}</h4>
+                </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 🔥 FOOTER -->
+<footer class="text-center mt-5">
+    <p>© 2026 | Designed by Dipak 🚀</p>
+</footer>
+
+</body>
+</html>
