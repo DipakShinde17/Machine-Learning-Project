@@ -1,0 +1,1 @@
+ C:\Users\Dipak\Desktop\Resume Shortlisting System> streamlit run NLP_demo.py
